@@ -1,0 +1,19 @@
+API key: 5878049896b780788588d822aa5cce0a
+
+API call (For several ID's) (ID's in http://bulk.openweathermap.org/sample/): api.openweathermap.org/data/2.5/group?id={id,..,id}&appid={API key}
+    Missing units parameter!!
+
+ID's:
+    Montevideo: 3441575
+    New York City: 5128581
+    Paris: 2968815
+
+API call: api.openweathermap.org/data/2.5/group?id=3441575,5128581,2968815&appid=5878049896b780788588d822aa5cce0a&units=metric
+
+Units parameter!! -> metric, imperial, standard ??
+
+Emmet mockup:
+    App > flexbox_container > Weather*3 > h2 * p*3
+
+Taking a break, currently sitting on "Unexpected token < in JSON at position 0", although changing the mode parameter in the api call, fetch() is receiving an HTML response
+    Solved after break. Was missing "https://" before API call, noticed it in Response section of Chrome's Network tab
