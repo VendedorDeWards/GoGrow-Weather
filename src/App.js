@@ -15,14 +15,14 @@ export default class App extends React.Component {
 		fetch("https://api.openweathermap.org/data/2.5/group?id=3441575,5128581,2968815&appid=5878049896b780788588d822aa5cce0a&units=metric&mode=JSON")
 			.then(res => res.json())
 			.then(data => {
-				for (let i = 0; i < data.cnt; i++) {
+				data.list.forEach(element => {
 					props.push({
-						name: data.list[i].name,
-						temperature: data.list[i].main.temp,
-						wind_speed: data.list[i].wind.speed,
-						clouds: data.list[i].clouds.all
+						name: element.name,
+						temperature: element.main.temp,
+						wind_speed: element.wind.speed,
+						clouds: element.clouds.all
 					})
-				}
+				})
 				this.setState({
 					weather_components: props.map(props => <Weather key={props.name} {...props}/>)
 				})

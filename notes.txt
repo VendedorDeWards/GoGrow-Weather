@@ -1,3 +1,5 @@
+22/10/2020
+
 API key: 5878049896b780788588d822aa5cce0a
 
 API call (For several ID's) (ID's in http://bulk.openweathermap.org/sample/): api.openweathermap.org/data/2.5/group?id={id,..,id}&appid={API key}
@@ -17,3 +19,9 @@ Emmet mockup:
 
 Taking a break, currently sitting on "Unexpected token < in JSON at position 0", although changing the mode parameter in the api call, fetch() is receiving an HTML response
     Solved after break. Was missing "https://" before API call, noticed it in Response section of Chrome's Network tab
+
+Commited and pushed.
+
+23/10/2020
+
+Noticed room for improvement in for loop with forEach() or for...of in ./src/App.js (No need for iterator variable). Fixed, commited and pushed.
